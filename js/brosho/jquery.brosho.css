@@ -1,0 +1,126 @@
+#brosho-wrapper {
+  position: fixed;
+  text-align: left;
+  color: #212121;
+  font-family: Helvetica, Arial, serif;
+  font-size: 13px;
+}
+
+#brosho-wrapper a {
+  background: #58a1bb;
+  color: black;
+  padding: 2px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-shadow: 1px 1px 0 #70cbeb;
+  text-decoration: none;
+}
+#brosho-wrapper a:hover {
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+#brosho-editor {
+  background: #b8b8b8;
+  margin: 10px 10px 0 10px;
+  padding: 10px;
+  border-radius-topleft: 10px;
+  border-radius-topright: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-bottom: 1px solid #8F8F8F;
+}
+
+#brosho-editor label {
+  display: block;
+  text-shadow: 1px 1px 0 #DFDFDF;
+  margin-bottom: 5px;
+}
+
+#brosho-selector-field, #brosho-css-field {
+  width: 100%;
+  font-family: 'Andale Mono', 'Lucida Console', monospace;
+  font-size: 12px;
+}
+
+#brosho-selector {
+  margin-bottom: 10px;
+}
+
+#brosho-controls {
+  margin: 0 10px 10px 10px;
+  background: #7d7d7d;
+  color: white;
+  padding: 10px;
+  min-height: 14px;
+  border-radius-bottomleft: 10px;
+  border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-top: 1px solid #CFCFCF;
+}
+
+.brosho-bottom { bottom: 0; left: 0; width: 100%; }
+.brosho-top { top: 0; left: 0; width: 100%; }
+.brosho-top textarea, .brosho-bottom textarea { height: 30px; }
+.brosho-top #brosho-controls li, .brosho-bottom #brosho-controls li { float: left; margin-right: 20px; }
+
+.brosho-left { top: 0; left: 0; width: 20%; }
+.brosho-right { top: 0; right: 0; width: 20%; }
+.brosho-left textarea, .brosho-right textarea { height: 200px; }
+.brosho-left #brosho-controls li, .brosho-right #brosho-controls li { float: auto; margin: 15px 0 15px 0; }
+
+.brosho-element-hover { border: 3px solid red; }
+
+
+#brosho-overlay-wrapper { display: none; }
+
+#brosho-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 23;
+}
+
+#brosho-css-output {
+  position: fixed;
+  top: 50px;
+  left: 25%;
+  width: 50%;
+  height: 400px;
+  background: #b8b8b8;
+  padding: 10px 20px 30px 20px;
+  z-index: 24;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+#brosho-css-output a {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  font-family: Helvetica, Arial, serif;
+  color: black;
+  text-shadow: 1px 1px 0 #DFDFDF;
+  margin-bottom: 6px;
+}
+
+#brosho-css-output a:hover { text-decoration: none; }
+
+#brosho-css-output textarea {
+  height: 380px;
+  width: 100%;
+  font-family: 'Andale Mono', 'Lucida Console', monospace;
+  font-size: 12px;
+}
