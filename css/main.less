@@ -3,13 +3,28 @@
 html { font-size: 16px; }
 body { font-size: 62.5%; font-family: Helvetica, Arial, sans-serif; background: white; color: #333333; text-align: center; }
 
-h1, h2, h3 { color: #FF4D00; }
-h1 { font-size: 2.6em; margin-bottom: 20px; }
-h2 { font-size: 2.0em; margin-bottom: 16px; }
-h3 { font-size: 1.6em; margin-bottom: 8px; }
-p { font-size: 1.4em; line-height: 18px; margin-bottom: 14px; }
-a { color: #FF4D00; text-decoration: none; }
-a:hover { text-decoration: underline; }
 
-#wrapper { width: 800px; margin: 50px auto 0 auto; text-align: left; }
+#wrapper { width: 600px; margin: 30px auto 30px auto; text-align: left; background: #efefef; border: 5px solid #aaaaaa; border-radius: 10px; -moz-border-radius: 10px; -webkit-border-radius: 10px; padding: 50px; }
 .clear { clear: both; }
+
+
+h1 { font-size: 3.2em; text-shadow: 1px 1px 0 white;
+  span { font-size: 0.45em; display: block; color: #555555; margin: 10px 0 40px 0; text-align: right; }
+}
+h2 { font-size: 1.4em; margin-bottom: 12px; }
+
+ol { border-bottom: 1px solid white; padding-bottom: 50px;
+  li { float: left; margin-right: 10px;
+    a { background: #333333; color: white; padding: 5px 10px 5px 10px; text-decoration: none; font-size: 1.3em; border-radius: 30px; -moz-border-radius: 30px; -webkit-border-radius: 30px; text-shadow: 1px 1px #222222; }
+    a:hover { background: #222222; }
+    span { display: block; width: 35px; height: 14px; background: #afafaf; border-radius: 30px; -moz-border-radius: 30px; -webkit-border-radius: 30px; }
+  }
+}
+
+#content { border-top: 1px solid #dddddd; padding-top: 30px; font-size: 1.3em;
+  p { line-height: 17px; margin-bottom: 17px; }
+  
+  pre { font-size: 12px; line-height: 20px; background: black; color: white; overflow: auto; margin-bottom: 17px;
+    code { display: block; padding: 10px; }
+  }
+}
