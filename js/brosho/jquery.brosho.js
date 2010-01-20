@@ -145,8 +145,10 @@
     
     
     selector_field.blur(function() { //watch the blur event for the selector textbox
-      if($(selector_field.val()).attr('brosho-css')) { //check if we already have altered the matching element
-        css_field.val($(selector_field.val()).attr('brosho-css')); //set the css editor with the value of the attribute brosho-css
+      var brosho_css = $(selector_field.val()).attr('brosho-css'); //used multiple times
+      
+      if(brosho_css) { //check if we already have altered the matching element
+        css_field.val(brosho_css); //set the css editor with the value of the attribute brosho-css
       } else { //no changed css yet
         css_field.val(''); //clear the editor
       }
