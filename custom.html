@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Brosho Plugin - Example</title>
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/brosho/jquery.brosho.js"></script>
+    
+    <style type="text/css" media="screen">
+      .custom-hover {
+        box-shadow: black 0 0 5px;
+        -moz-box-shadow: black 0 0 5px;
+        -webkit-box-shadow: black 0 0 5px;
+      }
+    </style>
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $.fn.brosho({                                         //call to the brosho plugin
+          stylesheet:         'js/brosho/jquery.brosho.css',  //path of the brosho stylesheet if it is not in 'js/brosho/jquery.brosho.css'
+          position:           'left',                         //initial position of the editor ('top', 'bottom', 'left', 'right')
+          elementHoverClass:  'custom-hover',                 //a custom hover class
+          editorOpacity:      1                               //full opacity on editor
+        });
+      });
+    </script>
+    
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <h1>Brosho Plugin - Example<span>Set your own options to Brosho</span></h1>
+      </div>
+      
+      <ol id="navigation">
+        <li><a href="index.html">Default Usage</a></li>
+        <li><a href="custom.html">Custom Usage</a></li>
+        <li><span></span></li>
+        <li><a href="http://usejquery.com/posts/8/brosho-design-in-the-browser-jquery-plugin">Documentation</a></li>
+        <li><a href="http://github.com/mustardamus/brosho-plugin/tree/master/js/brosho/">Source</a></li>
+        <li><a href="http://github.com/mustardamus/brosho-plugin/downloads">Download</a></li>
+      </ol>
+      <div class="clear"></div>
+      
+      <div id="content">
+        <h2>Include jQuery and Brosho</h2>
+        <p>Include jQuery and the Brosho Plugin in your header:</p>
+<pre><code>&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js">&lt;/script&gt;
+&lt;script type="text/javascript" src="js/brosho/jquery.brosho.js">&lt;/script&gt;</code></pre>
+
+        <h2>Set a custom element hover class</h2>
+        <p>You can have a custom element hover class. Define it in your stylesheet or in the document itself. In this example the hover effect is a dropshadow:</p>
+<pre><code>.custom-hover {
+  box-shadow: black 0 0 5px;
+  -moz-box-shadow: black 0 0 5px;
+  -webkit-box-shadow: black 0 0 5px;
+}</code></pre>
+
+        <h2>Call the Plugin with custom options</h2>
+        <p>Now you can call the Plugin when the DOM is ready with the custom options available like so:</p>
+<pre><code>$(document).ready(function() {
+  $.fn.brosho({                           //call to the brosho plugin
+    stylesheet:         'css/brosho.css', //path of the brosho stylesheet if it is not in 'js/brosho/jquery.brosho.css'
+    position:           'left',           //initial position of the editor ('top', 'bottom', 'left', 'right')
+    elementHoverClass:  'custom-hover',   //a custom hover class
+    editorOpacity:      1                 //full opacity on editor
+  });
+});</code></pre>
+      </div>
+      
+      <div id="footer">
+        Brosho jQuery Plugin by <a href="http://mustardamus.com">Sebastian Senf</a> for <a href="http://usejquery.com">Use jQuery</a>
+      </div>
+    </div>
+  </body>
+</html>
