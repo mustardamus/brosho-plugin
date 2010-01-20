@@ -1,3 +1,24 @@
+/*
+   jQuery Brosho Plugin
+   =====================
+   Design in the Browser
+   
+   Version 0.1 - 20. Jan 2010
+   
+   Copyright (c) 2010 by Sebastian Senf:
+   http://mustardamus.com/
+   http://usejquery.com/
+   
+   Dual licensed under the MIT and GPL licenses:
+   http://www.opensource.org/licenses/mit-license.php
+   http://www.gnu.org/licenses/gpl.html
+   
+   Documentation:   http://usejquery.com/posts/8/brosho-design-in-the-browser-jquery-plugin
+   Demo:            http://demos.usejquery.com/brosho-plugin/
+   Source:          http://github.com/mustardamus/brosho-plugin
+*/
+
+
 (function($) {
   $.fn.brosho = function(options) {
     var opts = $.extend({}, $.fn.brosho.defaults, options);
