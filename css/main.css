@@ -15,7 +15,7 @@ body {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  padding: 50px;
+  padding: 50px 50px 10px 50px;
 }
 .clear { clear: both; }
 h1 {
@@ -83,3 +83,10 @@ ol li span {
   display: block;
   padding: 10px;
 }
+#footer {
+  text-align: center;
+  font-size: 1.2em;
+  color: #afafaf;
+  padding-top: 40px;
+}
+#footer a { color: #afafaf; }
