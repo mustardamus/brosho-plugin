@@ -77,7 +77,7 @@
 .brosho-left textarea, .brosho-right textarea { height: 200px; }
 .brosho-left #brosho-controls li, .brosho-right #brosho-controls li { float: auto; margin: 15px 0 15px 0; }
 
-.brosho-element-hover { border: 3px solid red; }
+.brosho-element-hover { outline: 3px solid red; }
 
 
 #brosho-overlay-wrapper { display: none; }
