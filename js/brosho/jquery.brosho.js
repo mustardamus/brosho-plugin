@@ -34,6 +34,10 @@
         media:  'screen',
         href:   opts.stylesheet
       }).appendTo('head'); //and append it to the head
+      
+      $.ajaxSetup({ async: false }); //set async to false for ajax to make sure the dependent scripts are ready for use
+      $.getScript('js/brosho/jquery.autocomplete.js');; //load autocomplete plugin
+      $.getScript('js/brosho/jquery.caret.js'); //load caret plugin
     }
     
     
