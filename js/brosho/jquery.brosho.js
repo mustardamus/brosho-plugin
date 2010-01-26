@@ -36,7 +36,7 @@
       }).appendTo('head'); //and append it to the head
       
       $.ajaxSetup({ async: false }); //set async to false for ajax to make sure the dependent scripts are ready for use
-      $.getScript('js/brosho/jquery.autocomplete.js');; //load autocomplete plugin
+      $.getScript('js/brosho/jquery.autocomplete.js'); //load autocomplete plugin
       $.getScript('js/brosho/jquery.caret.js'); //load caret plugin
     }
     
@@ -157,6 +157,20 @@
     });
     
     
+    css_field.autocomplete(['border','display','padding','position', 'border-left', 'border-right', 'border-top', 'border-bottom'], {
+  		multiple: true,
+  		multipleSeparator: ";",
+  		autoFill: true,
+  		formatResult: function(row) {
+  		  return row+":";
+  		}
+  	});
+  	
+  	/*css_field.trigger('setOptions', {
+  	  multipleSeparator: "\n"
+  	});*/
+  	
+
     css_field.keyup(function(event) { //watch key up's on the css editor
       if(css_field.val().substr(css_field.val().length - 1, 1) == ';' || //is the last typed character a ;
          css_field.val().length == 0) { //or the css editor is empty
@@ -164,6 +178,24 @@
         $(selector_field.val()).attr({ //set the new attributes on each matching element
           style: css_field.val(), //set new style
           'brosho-css': css_field.val() //save exact content of the css editor in a extra attribute *
+        });
+      }
+      
+      var css_field_offset = css_field.offset();
+      var before_caret = css_field.val().substr(0, css_field.caret().start);
+      var lines = before_caret.split("\n");
+      var line_breaks = lines.length;
+      var last_line_len = lines[line_breaks - 1].length;
+
+      $('.ac_results').css({
+        top: Math.round(css_field_offset.top + 14 * line_breaks),
+        left: Math.round(css_field_offset.left + 7 * last_line_len)
+      });
+      
+      if(css_field.val().substr(css_field.val().length - 2, 2) == ':;') {
+        css_field.caret({
+          start: css_field.val().length - 1,
+          end: css_field.val().length - 1
         });
       }
     });

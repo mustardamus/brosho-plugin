@@ -591,7 +591,7 @@ $.Autocompleter.Select = function (options, input, select, config) {
 		element = $("<div/>")
 		.hide()
 		.addClass(options.resultsClass)
-		.css("position", "absolute")
+		.css("position", "fixed") //edited for brosho plugin
 		.appendTo(document.body);
 	
 		list = $("<ul/>").appendTo(element).mouseover( function(event) {
@@ -720,12 +720,15 @@ $.Autocompleter.Select = function (options, input, select, config) {
 			return this.visible() && (listItems.filter("." + CLASSES.ACTIVE)[0] || options.selectFirst && listItems[0]);
 		},
 		show: function() {
-			var offset = $(input).offset();
-			element.css({
+		  //edit for brosho plugin by Sebastian Senf
+			/*var offset = $(input).offset();
+			element.css({ //edit for brosho plugin - set the position on keyup over and over
 				width: typeof options.width == "string" || options.width > 0 ? options.width : $(input).width(),
 				top: offset.top + input.offsetHeight,
 				left: offset.left
-			}).show();
+			})*/
+			
+			element.show();
             if(options.scroll) {
                 list.scrollTop(0);
                 list.css({
